@@ -1,3 +1,6 @@
+# mint_legacy
+Original *mint* reverted to the commit 64af8ab
+
 ![A lock with a mint leaf](https://ipv.sx/mint/mint.svg)
 
 mint - A Minimal TLS 1.3 stack
@@ -23,7 +26,7 @@ off.
 Installation is the same as for any other Go package:
 
 ```
-go get github.com/bifurcation/mint
+go get github.com/ZverevM/mint_legacy
 ```
 
 The API is pretty much the same as for the TLS module, with `Dial` and `Listen`
@@ -36,7 +39,7 @@ listener, err := mint.Listen("tcp", "localhost:4430", &mint.Config{...})
 ```
 
 Documentation is available on
-[godoc.org](https://godoc.org/github.com/bifurcation/mint)
+[godoc.org](https://godoc.org/github.com/ZverevM/mint_legacy)
 
 
 ## Interoperability testing
@@ -47,7 +50,7 @@ for testing against NSS are as follows.
 
 ```
 # Install mint
-go get github.com/bifurcation/mint
+go get github.com/ZverevM/mint_legacy
 
 # Environment for NSS (you'll probably want a new directory)
 NSS_ROOT=<whereever you want to put NSS>
@@ -77,10 +80,10 @@ cd $NSS_ROOT
 ./dist/$PLATFORM/bin/selfserv -d tests_results/security/$HOST.1/ssl_gtests/ -n rsa -p 4430
 # if you get `NSS_Init failed.`, check the path above, particularly around $HOST
 # ...
-go run $GOPATH/src/github.com/bifurcation/mint/bin/mint-client/main.go
+go run $GOPATH/src/github.com/ZverevM/mint_legacy/bin/mint-client/main.go
 
 # Test with client=NSS server=mint
-go run $GOPATH/src/github.com/bifurcation/mint/bin/mint-server/main.go
+go run $GOPATH/src/github.com/ZverevM/mint_legacy/bin/mint-server/main.go
 # ...
 cd $NSS_ROOT
 dist/$PLATFORM/bin/tstclnt -d tests_results/security/$HOST/ssl_gtests/ -V tls1.3:tls1.3 -h 127.0.0.1 -p 4430 -o

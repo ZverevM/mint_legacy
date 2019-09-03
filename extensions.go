@@ -4,7 +4,7 @@ import (
 	"bytes"
 	"fmt"
 
-	"github.com/bifurcation/mint/syntax"
+	"github.com/ZverevM/mint_legacy/syntax"
 )
 
 type ExtensionBody interface {

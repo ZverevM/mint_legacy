@@ -4,7 +4,7 @@ import (
 	"flag"
 	"fmt"
 
-	"github.com/bifurcation/mint"
+	"github.com/ZverevM/mint_legacy"
 )
 
 var addr string

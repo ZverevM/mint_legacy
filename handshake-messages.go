@@ -7,7 +7,7 @@ import (
 	"encoding/binary"
 	"fmt"
 
-	"github.com/bifurcation/mint/syntax"
+	"github.com/ZverevM/mint_legacy/syntax"
 )
 
 type HandshakeMessageBody interface {
